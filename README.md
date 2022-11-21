@@ -56,7 +56,7 @@ Users can view products and like products using the landing page. (/)
         </tr>
         <tr>
             <td align=center>Admin Microservice</td>
-            <td><--->  RabbitMQ  <---></td>
+            <td>↔ RabbitMQ ↔</td>
             <td align=center>Main Microservice</td>
         </tr>
         <tr>
