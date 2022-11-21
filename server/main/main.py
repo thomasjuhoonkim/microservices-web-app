@@ -22,10 +22,12 @@ class Product(db.Model):
     id: int
     title: str
     image: str
+    likes: int
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=False)
     title = db.Column(db.String(200))
     image = db.Column(db.String(200))
+    likes = db.Column(db.Integer, default=0)
 
 
 @dataclass
@@ -54,6 +56,10 @@ def like(id):
 
         # event
         publish("product_liked", id)
+
+        product = Product.query.get(id)
+        product.likes += 1
+        db.session.commit()
     except:
         abort(400, "You already liked this product")
 
