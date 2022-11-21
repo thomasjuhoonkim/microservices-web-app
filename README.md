@@ -4,6 +4,34 @@
 
 ## Project Structure
 
+<table>
+    <tbody>
+        <tr>
+            <td colspan=3 align=center>API Gateway</td>
+        </tr>
+        <tr>
+            <td align=center>↕</td>
+            <td></td>
+            <td align=center>↕</td>
+        </tr>
+        <tr>
+            <td align=center>Admin Microservice</td>
+            <td>↔ RabbitMQ ↔</td>
+            <td align=center>Main Microservice</td>
+        </tr>
+        <tr>
+            <td align=center>↕</td>
+            <td></td>
+            <td align=center>↕</td>
+        </tr>
+        <tr>
+            <td align=center>Admin Database</td>
+            <td></td>
+            <td align=center>Main Database</td>
+        </tr>
+    </tbody>
+</table>
+
 ### Server
 
 The server is made up of two microservices: admin and main. They are deployed using Docker containers.
@@ -43,31 +71,3 @@ The client is a React-Typescript frontend that has two main entrypoints: user an
 Admins can do CRUD operations on products on the admin dashboard. (/admin/products)
 
 Users can view products and like products using the landing page. (/)
-
-<table>
-    <tbody>
-        <tr>
-            <td colspan=3 align=center>API Gateway</td>
-        </tr>
-        <tr>
-            <td align=center>↕</td>
-            <td></td>
-            <td align=center>↕</td>
-        </tr>
-        <tr>
-            <td align=center>Admin Microservice</td>
-            <td>↔ RabbitMQ ↔</td>
-            <td align=center>Main Microservice</td>
-        </tr>
-        <tr>
-            <td align=center>↕</td>
-            <td></td>
-            <td align=center>↕</td>
-        </tr>
-        <tr>
-            <td align=center>Admin Database</td>
-            <td></td>
-            <td align=center>Main Database</td>
-        </tr>
-    </tbody>
-</table>
