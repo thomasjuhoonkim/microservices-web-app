@@ -4,6 +4,8 @@
 
 ## Project Structure
 
+### Visualization
+
 <table>
     <tbody>
         <tr>
